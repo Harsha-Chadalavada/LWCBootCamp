@@ -1,0 +1,42 @@
+How to fix below error for local development Server?
+
+I was able to launch local development server successfully initially. I modified name of lwc component then the local server didn't show my component. I closed the browser and i started local development server in dx got the below error. 
+
+tarting LWC Local Development.
+    Dev Hub Org: MyDevhub
+    Scratch Org: sriharsha.chadalavada@brave-impala-cg0wnj.com
+    Api Version: 50.0
+[HPM] Proxy created: /  -> https://brave-impala-cg0wnj-dev-ed.my.salesforce.com
+[HPM] Subscribed to http-proxy events: [ 'proxyReq', 'error', 'close' ]
+Server start up failed.
+Error: The local development server was not able to start.
+ERROR running force:lightning:lwc:start:  Unable to copy dist assets: EPERM: operation not permitted, mkdir 'c:\Users\sriharsha_chadalavab\Documents\Trailhead\BootcampLWC\.localdevserver'
+Error: listen EADDRINUSE: address already in use :::9856
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1447:7)
+    at C:\Users\sriharsha_chadalavab\AppData\Local\sfdx\node_modules\reload\lib\reload.js:168:29
+    at new Promise (<anonymous>)
+    at startWebSocketServer (C:\Users\sriharsha_chadalavab\AppData\Local\sfdx\node_modules\reload\lib\reload.js:109:14)
+    at C:\Users\sriharsha_chadalavab\AppData\Local\sfdx\node_modules\reload\lib\reload.js:64:9 {
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'listen',
+  address: '::',
+  port: 9856
+}
+Error: listen EADDRINUSE: address already in use :::9856
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1447:7)
+    at C:\Users\sriharsha_chadalavab\AppData\Local\sfdx\node_modules\reload\lib\reload.js:168:29
+    at new Promise (<anonymous>)
+    at startWebSocketServer (C:\Users\sriharsha_chadalavab\AppData\Local\sfdx\node_modules\reload\lib\reload.js:109:14)
+    at C:\Users\sriharsha_chadalavab\AppData\Local\sfdx\node_modules\reload\lib\reload.js:64:9 {
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'listen',
+  address: '::',
+  port: 9856
+}
+LWR6000: Created version hash "816742eed2"
