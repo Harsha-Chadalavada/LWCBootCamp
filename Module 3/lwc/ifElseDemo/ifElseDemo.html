@@ -1,0 +1,7 @@
+<template>
+  <div class="slds-scope slds-box slds-theme_default">
+      <img if:false={isTom} src="https://www.freepnglogos.com/uploads/tom-and-jerry-png/tom-and-jerry-crew-member-the-month-april-never-home-23.png" alt="This is jerry" class="imageJerry" width="250px" height= "250px"/>
+      <img if:true={isTom} src="https://www.pngkey.com/png/detail/62-627628_jerry-png-photo-tom-and-jerry-png.png" alt="This is tom" class="imageTom" width="250px" height= "250px"/>
+      <lightning-button label={labelName} onclick={onClick} variant="brand"></lightning-button>
+  </div>
+</template>
