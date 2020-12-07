@@ -1,0 +1,38 @@
+<template>
+    <lightning-card title="Account Quick Create" icon-name="standard:account" >
+        <lightning-button label="Show/Hide Account Fields" slot="actions" onclick={handleAccountShowHide}></lightning-button>
+        <lightning-record-edit-form if:false={showAccount} object-api-name="Account" onsuccess={handleAccountSuccess}>
+            <lightning-input-field field-name="Name">  </lightning-input-field>
+            <div class="slds-align_absolute-center">
+                <lightning-button class="slds-m-top_small" label="Cancel" onclick={handleAccountReset}></lightning-button>
+                <lightning-button class="slds-m-top_small" type="submit" label="Save" variant="brand"></lightning-button>
+            </div>
+        </lightning-record-edit-form>
+    </lightning-card>
+
+    <lightning-card title="Contact Quick Create" icon-name="standard:contact" >
+        <lightning-button label="Show/Hide Contact Fields" slot="actions" onclick={handleContactShowHide}></lightning-button>
+        <lightning-record-edit-form if:false={showContact} object-api-name="Contact" onsuccess={handleContactSuccess}>
+            <lightning-input-field field-name="Name">  </lightning-input-field>
+            <lightning-input-field field-name="AccountId">  </lightning-input-field>
+            <div class="slds-align_absolute-center">
+                <lightning-button class="slds-m-top_small" label="Cancel" onclick={handleContactReset}></lightning-button>
+                <lightning-button class="slds-m-top_small" type="submit" label="Save" variant="brand"></lightning-button>
+            </div>
+        </lightning-record-edit-form>
+    </lightning-card>
+
+    <lightning-card title="Opportunity Quick Create" icon-name="standard:opportunity" >
+        <lightning-button label="Show/Hide Opportunity Fields" slot="actions" onclick={handleOpportunityShowHide}></lightning-button>
+        <lightning-record-edit-form if:false={showOpportunity} object-api-name="Opportunity" onsuccess={handleOpportunitySuccess}>
+            <lightning-input-field field-name="Name">  </lightning-input-field>
+            <lightning-input-field field-name="CloseDate">  </lightning-input-field>
+            <lightning-input-field field-name="StageName">  </lightning-input-field>
+            <div class="slds-align_absolute-center">
+                <lightning-button class="slds-m-top_small" label="Cancel" onclick={handleOpportunityReset}></lightning-button>
+                <lightning-button class="slds-m-top_small" type="submit" label="Save" variant="brand"></lightning-button>
+            </div>
+        </lightning-record-edit-form>
+    </lightning-card>
+    
+</template>
