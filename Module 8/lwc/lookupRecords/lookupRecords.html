@@ -1,0 +1,46 @@
+<template>
+    <lightning-card title="Search Account" icon-name="standard:account" if:false={hideLookup}>
+        <div  class="slds-box" >  
+            <c-lwc-lookup lookup-label="Account" object-api-name="account" icon-name="standard:account"  
+              onrecordselection={onAccountSelection}></c-lwc-lookup>  
+        </div>  
+    </lightning-card>
+    <lightning-card title="Selected Account" icon-name="standard:account" if:true={hideLookup}>
+        <div class="slds-box">  
+
+            <div class="slds-text-heading_large" ><b>{accountName}</b> </div> 
+            <p>{accountIndustry} - {accountType}</p>
+        </div>
+        <lightning-button class="slds-align_absolute-center" label="Reset Search" onclick={handleReset}></lightning-button>
+    </lightning-card>
+    <lightning-card title="Associated Contacts" icon-name="standard:contact" if:true={hideLookup}>
+        <div class="slds-var-p-around_medium">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Title</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+                <template for:each={contactRecordList} for:item="contact" for:index="index">
+                    <tr key={contact.Id}> 
+                        <td >
+                            {contact.Name}   
+                        </td>
+                        <td >
+                            {contact.Title}
+                        </td>
+                        <td >
+                            {contact.Email}
+                        </td>
+                        <td >
+                            {contact.Phone}
+                        </td>
+                    </tr>
+                </template>
+            </table>
+        </div>
+
+    </lightning-card>
+    
+</template>
