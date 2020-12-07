@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Grand Parent" icon-name="custom:custom15">
+        <div  class="slds-grid">
+            <div class="slds-col">
+                <p>{selectCount} of {totalCount} Children Selected</p>
+            </div>
+            <div class="slds-col">
+                <lightning-button label="Reset All" onclick={handleResetAll} variant="brand" ></lightning-button>
+            </div>
+        </div>
+        <c-child-to-parent-example2-parent 
+            onselectvaluechange={hanldeSelectValueChangeGP}
+        ></c-child-to-parent-example2-parent>
+
+    </lightning-card>
+</template>

@@ -1,0 +1,38 @@
+<template>
+    <div  class="slds-box">
+        <lightning-card title="Parent" icon-name="custom:custom9">
+            <div class="slds-grid">
+    
+                <div class="slds-col">
+                    <p>
+                        Child one : {selectedStatus1}
+                    </p>
+                    <c-child-to-parent-example2-child childtitle ="Child One" is-select ={child1Select} selectvalues = {allSelectStatus}
+                    onselectvaluechange={hanldeSelectValueChange}
+                    ></c-child-to-parent-example2-child>
+    
+                </div>
+                <div class="slds-col">
+                    <p>
+                        Child two : {selectedStatus2}
+                    </p>
+                    <c-child-to-parent-example2-child childtitle ="Child Two" is-select ={child2Select} selectvalues = {allSelectStatus}
+                    onselectvaluechange={hanldeSelectValueChange}
+                    ></c-child-to-parent-example2-child>
+    
+                </div>
+                <div class="slds-col">
+                    <p>
+                        Child three : {selectedStatus3}
+                    </p>
+                    <c-child-to-parent-example2-child childtitle ="Child Three" is-select ={child3Select} selectvalues = {allSelectStatus}
+                    onselectvaluechange={hanldeSelectValueChange}
+                    ></c-child-to-parent-example2-child>
+    
+                </div>
+            </div>  
+        </lightning-card>
+
+    </div>
+    
+</template>
